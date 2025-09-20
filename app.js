@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 
-// app.use('/public', express.static('public'));
+app.use('/public', express.static('public'));
 
 app.get("/",function(req,res){
-	res.send("Site currently under maintainance!");
+	res.sendFile(__dirname+"/index.html");
 });
 
 app.listen(5000);
